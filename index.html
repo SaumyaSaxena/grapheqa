@@ -200,25 +200,25 @@
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="75%">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="50%">
             <source src="./static/videos/grapheqa_bluepan_armcam_question_compressed_cropped_fast.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-cushions">
-          <video poster="" id="cushions" autoplay controls muted loop playsinline height="75%">
+          <video poster="" id="cushions" autoplay controls muted loop playsinline height="50%">
             <source src="./static/videos/grapheqa_couch_cushions_question_compressed_cropped_fast.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-handbag">
-          <video poster="" id="handbag" autoplay controls muted loop playsinline height="75%">
+          <video poster="" id="handbag" autoplay controls muted loop playsinline height="50%">
             <source src="./static/videos/grapheqa_handbag_question_compressed_cropped_fast.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-trashcan">
-          <video poster="" id="trashcan" autoplay controls muted loop playsinline height="75%">
+          <video poster="" id="trashcan" autoplay controls muted loop playsinline height="50%">
             <source src="./static/videos/grapheqa_couch_cushions_question_compressed_cropped_fast.mp4"
                     type="video/mp4">
           </video>
@@ -274,6 +274,22 @@
       </div>
     </div>
     <!--/ Method image. -->
+
+     <!-- VLM Planner image. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Hierarchical VLM Planner Architecture</h2>
+        <div class="method-image">
+          <img src="./static/images/vlm_planner_architecture.png" alt="The overall GraphEQA method." />
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            The Hierarchical Vision-Language planner takes as input the question, enriched scene graph, task-relevant visual memory, current state of the robot (position and room) and a history of past states, actions, answers and confidence values. The planner chooses the next <Goto_Object_node> action hierarchically by first selecting the room node and then the object node. The <Goto_Frontier_node> action is chosen based on the object nodes connected to the frontier via edges in the scene graph. The planner is asked to output a brief reasoning behind choosing each action. The planner also outputs an answer, confidence in its answer, reasoning behind the answer and confidence, the next action, a brief description of the scene graph and the visual memory.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ VLM Planner image. -->
 
     <!-- Results image. -->
     <div class="columns is-centered has-text-centered">
