@@ -286,7 +286,8 @@
           <p>
             The above table shows a comparison of baselines in simulation. We show Success rate (%),
 number of planning steps, and Lτ the trajectory length. Methods
-with a † indicate our implementations of that particular baseline.
+with a † indicate our implementations of that particular baseline. We compare against a strong baseline, Explore-EQA, which calibrates Prismatic-VLM to answer embodied questions confidently. To enable a more direct comparison to GraphEQA, we also compare against a version of Explore-EQA which used GPT-4o as the VLM, a more powerful VLM as compared to Prismatic-VLM. We call this baseline Explore-EQA-GPT4o. Finally, we also compare GraphEQA against a modified version of
+SayPlan which we call SayPlanVision. Similar to SayPlan, SayPlanVision first constructs a scene graph of the whole scene offline and then uses this scene graph for planning. We see that GraphEQA has higher success rate as compared to Explore-EQA and Explore-EQA-GPT4o, without the need to build an explicit 2D semantic task-specific memory. GraphEQA outperforms SayPlanVision even though SayPlanVision has access to the complete scene graph. Qualitative results point to an over-exploratory behavior of SayPlanVision for certain task categories.
           </p>
         </div>
       </div>
