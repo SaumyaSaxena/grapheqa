@@ -188,7 +188,16 @@
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">GraphEQA</span> finds the blue pan on the stove. The left-most video shows the robot moving about in a home captured via an externally mounted camera. The video also shows the metric-semantic 3D mesh reconstruction from Hydra, the object detections and their bounding boxes, and the 2D occupancy map from which GraphEQA selects frontier nodes. Green nodes represent the current target and blue nodes are available frontiers. The video obtained from the head camera is shown in the bottom right.
+        <span class="dnerf">GraphEQA</span> deployed on the Hello Robot Stretch RE2 platform in a home environment. 
+        <br> Question: <i>"Is there a blue pan on the stove?"</i> 
+        <br> 
+        <span style="text-align: left; display: block;">
+          Left panel: Robot navigating a home, while planning and mapping the environment in real-time; captured via an externally mounted camera. 
+          <br> 
+          Right panel: Metric-semantic 3D mesh and scene graph construction from Hydra. TSDF-based 2D occupancy map where white nodes represent explored areas, red nodes are obstacles, blue nodes are clustered frontiers. Green node shows the target location chosen by the planner. 
+          <br> 
+          Right panel inset: Video feed from the robot head camera.
+      </span>
       </h2>
     </div>
   </div>
@@ -233,7 +242,7 @@
         </div>
         <div class="content has-text-justified">
           <p>
-            Overall GraphEQA architecture. As the agent explores the environment, it used its sensor data (RGBD images, semantic map, camera poses and intrinsics) to construct a 3D metric-semantic hierarchical scene graph (3DSG) as well as a 2D occupancy map for frontier selection in real time. The constructed 3DSG is then enriched. From the set of images collected during each trajectory execution, a task-relevant subset is selected, called the task-relevant visual memory. A VLM-based planner takes as input the enriched scene graph, task-relevant visual memory, a history of past states and actions, and the embodied question and outputs the answer, its confidence in the selected answer, and the next step it needs to take in the environment. If the VLM agent is confident in its answer, the episode is terminated, else the proposed action is executed in the environment and the process repeats.
+            Overall GraphEQA architecture. As the agent explores the environment, it used its sensor data (RGBD images, semantic map, camera poses and intrinsics) to construct a 3D metric-semantic hierarchical scene graph (3DSG) as well as a 2D occupancy map for frontier selection in real time. The constructed 3DSG is then enriched with semantic room labels and semantically-enriched frontiers. From the set of images collected during each trajectory execution, a task-relevant subset is selected, called the task-relevant visual memory. A VLM-based planner takes as input the enriched scene graph, task-relevant visual memory, a history of past states and actions, and the embodied question and outputs the answer, its confidence in the selected answer, and the next step it needs to take in the environment. If the VLM agent is confident in its answer, the episode is terminated, else the proposed action is executed in the environment and the process repeats.
           </p>
         </div>
       </div>
@@ -249,7 +258,7 @@
         </div>
         <div class="content has-text-justified">
           <p>
-            The Hierarchical Vision-Language planner takes as input the question, enriched scene graph, task-relevant visual memory, current state of the robot (position and room) and a history of past states, actions, answers and confidence values. The planner chooses the next <Goto_Object_node> action hierarchically by first selecting the room node and then the object node. The <Goto_Frontier_node> action is chosen based on the object nodes connected to the frontier via edges in the scene graph. The planner is asked to output a brief reasoning behind choosing each action. The planner also outputs an answer, confidence in its answer, reasoning behind the answer and confidence, the next action, a brief description of the scene graph and the visual memory.
+            The Hierarchical Vision-Language planner takes as input the question, enriched scene graph, task-relevant visual memory, current state of the robot (position and room) and a history of past states, actions, answers and confidence values. The planner chooses the next <i>Goto_Object_node</i> action hierarchically by first selecting the room node and then the object node. The <i>Goto_Frontier_node</i> action is chosen based on the object nodes connected to the frontier via edges in the scene graph. The planner is asked to output a brief reasoning behind choosing each action. The planner also outputs an answer, confidence in its answer, reasoning behind the answer and confidence, the next action, a brief description of the scene graph and the visual memory.
           </p>
         </div>
       </div>
@@ -259,16 +268,19 @@
     <!-- Results image. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Results</h2>
+        <h2 class="title is-3">Experimental Results</h2>
         <div class="method-image">
           <img src="./static/images/grapheqa_baselines_table.png" width="60%" alt="The results." />
         </div>
         <div class="content has-text-justified">
           <p>
-            The above table shows a comparison of baselines in simulation. We show Success rate (%),
-number of planning steps, and Lτ the trajectory length. Methods
-with a † indicate our implementations of that particular baseline. We compare against a strong baseline, Explore-EQA, which calibrates Prismatic-VLM to answer embodied questions confidently. To enable a more direct comparison to GraphEQA, we also compare against a version of Explore-EQA which used GPT-4o as the VLM, a more powerful VLM as compared to Prismatic-VLM. We call this baseline Explore-EQA-GPT4o. Finally, we also compare GraphEQA against a modified version of
-SayPlan which we call SayPlanVision. Similar to SayPlan, SayPlanVision first constructs a scene graph of the whole scene offline and then uses this scene graph for planning. We see that GraphEQA has higher success rate as compared to Explore-EQA and Explore-EQA-GPT4o, without the need to build an explicit 2D semantic task-specific memory. GraphEQA outperforms SayPlanVision even though SayPlanVision has access to the complete scene graph. Qualitative results point to an over-exploratory behavior of SayPlanVision for certain task categories.
+            We compare the performance of GraphEQA against competitive baselines in simulation in the Habitat-Sim environment on the HM3D-EQA dataset and in the real-world in two indoor environments: home and office. 
+            The above table shows comparison to baselines in simulation using metrics: average success rate (%), average number of VLM planning steps, and average trajectory length L<sub>&tau;</sub>. We compare against a strong baseline, Explore-EQA, which calibrates Prismatic-VLM to answer embodied questions confidently. We also compare against Explore-EQA-GPT4o, a version of Explore-EQA which used GPT-4o instead of Prismatic-VLM. Finally, we compare against SayPlanVision, a modified version of
+            SayPlan, which in addition to the full scene graph also has access to task-relevant visual memory. 
+            We observe that GraphEQA has higher success rate as compared to Explore-EQA and Explore-EQA-GPT4o, without the need to build an explicit 2D semantic task-specific memory. 
+            Compared to Explore-EQA, our method completes the task in significantly lower planning steps and navigates the environment more efficiently (lower trajectory length). Explore-EQA-GPT4o has lower success rates but also has lower planning steps. Qualitative results show that Explore-EQA-GPT4o tends to be overconfident and terminates the episode early.
+            GraphEQA outperforms SayPlanVision, without needing access to the complete scene graph.
+            Qualitatively, we observe that given access to the complete scene graph, SayPlanVision is overconfident about its choice of object node actions, leading to shorter trajectory lengths in successful cases, but also to increased failure cases.
           </p>
         </div>
       </div>
