@@ -95,22 +95,22 @@
             <span class="author-block">
               <a href="https://blakerbuchanan.github.io">Blake Buchanan</a><sup>2*</sup>,</span>
             <span class="author-block">
-              <a href="https://saumyasaxena.github.io/grapheqa/">Chris Paxton</a><sup>3</sup>,
+              <a href="https://cpaxton.github.io/about/">Chris Paxton</a><sup>3</sup>,
             </span>
             <span class="author-block">
-              <a href="https://saumyasaxena.github.io/grapheqa/">Bingqing Chen</a><sup>4</sup>,
+              <a href="https://scholar.google.com/citations?user=LYt_2MgAAAAJ&hl=en">Bingqing Chen</a><sup>4</sup>,
             </span>
             <span class="author-block">
-              <a href="https://saumyasaxena.github.io/grapheqa/">Narunas Vaskevicius</a><sup>4</sup>,
+              <a href="https://scholar.google.com/citations?user=U3KSTwkAAAAJ&hl=en">Narunas Vaskevicius</a><sup>4</sup>,
             </span>
             <span class="author-block">
-              <a href="https://saumyasaxena.github.io/grapheqa/">Luigi Palmieri</a><sup>4</sup>,
+              <a href="https://palmieri.github.io/">Luigi Palmieri</a><sup>4</sup>,
             </span>
             <span class="author-block">
-              <a href="https://saumyasaxena.github.io/grapheqa/">Jonathan Francis</a><sup>4</sup>
+              <a href="https://scholar.google.com/citations?user=7CLS0LwAAAAJ&hl=en">Jonathan Francis</a><sup>4</sup>
             </span>
             <span class="author-block">
-              <a href="https://saumyasaxena.github.io/grapheqa/">Oliver Kroemer</a><sup>1</sup>
+              <a href="https://www.ri.cmu.edu/ri-faculty/oliver-kroemer/">Oliver Kroemer</a><sup>1</sup>
             </span>
           </div>
 
@@ -125,7 +125,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
+                <a href="https://saumyasaxena.github.io/grapheqa/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -134,16 +134,16 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
+                <a href="https://saumyasaxena.github.io/grapheqa/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
-                  <span>arXiv</span>
+                  <span>arXiv (coming soon)</span>
                 </a>
               </span>
               <!-- Video Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -151,26 +151,26 @@
                   </span>
                   <span>Video</span>
                 </a>
-              </span>
+              </span> -->
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href="https://saumyasaxena.github.io/grapheqa/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code</span>
+                  <span>Code (coming soon)</span>
                   </a>
               </span>
               <!-- Dataset Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://github.com/google/nerfies/releases/tag/0.1"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
                   </span>
                   <span>Data</span>
-                  </a>
+                </a> -->
             </div>
 
           </div>
@@ -188,13 +188,13 @@
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">GraphEQA</span> deployed on the Hello Robot Stretch RE2 platform in a home environment. 
+        <span class="dnerf">GraphEQA</span> deployed on the <a href="https://hello-robot.com/">Hello Robot</a> Stretch RE2 platform in a home environment. 
         <br> Question: <i>"Is there a blue pan on the stove?"</i> 
         <br> 
         <span style="text-align: left; display: block;">
           Left panel: Robot navigating a home, while planning and mapping the environment in real-time; captured via an externally mounted camera. 
           <br> 
-          Right panel: Metric-semantic 3D mesh and scene graph construction from Hydra. TSDF-based 2D occupancy map where white nodes represent explored areas, red nodes are obstacles, blue nodes are clustered frontiers. Green node shows the target location chosen by the planner. 
+          Right panel: Metric-semantic 3D mesh and scene graph construction from <a href="https://github.com/MIT-SPARK/Hydra?tab=readme-ov-file">Hydra</a>. TSDF-based 2D occupancy map where white nodes represent explored areas, red nodes are obstacles, blue nodes are clustered frontiers. Green node shows the target location chosen by the planner. 
           <br> 
           Right panel inset: Video feed from the robot head camera.
       </span>
@@ -275,8 +275,8 @@
         <div class="content has-text-justified">
           <p>
             We compare the performance of GraphEQA against competitive baselines in simulation in the Habitat-Sim environment on the HM3D-EQA dataset and in the real-world in two indoor environments: home and office. 
-            The above table shows comparison to baselines in simulation using metrics: average success rate (%), average number of VLM planning steps, and average trajectory length L<sub>&tau;</sub>. We compare against a strong baseline, Explore-EQA, which calibrates Prismatic-VLM to answer embodied questions confidently. We also compare against Explore-EQA-GPT4o, a version of Explore-EQA which used GPT-4o instead of Prismatic-VLM. Finally, we compare against SayPlanVision, a modified version of
-            SayPlan, which in addition to the full scene graph also has access to task-relevant visual memory. 
+            The above table shows comparison to baselines in simulation using metrics: average success rate (%), average number of VLM planning steps, and average trajectory length L<sub>&tau;</sub>. We compare against a strong baseline, <a href="https://explore-eqa.github.io/">Explore-EQA</a>, which calibrates Prismatic-VLM to answer embodied questions confidently. We also compare against Explore-EQA-GPT4o, a version of Explore-EQA which used GPT-4o instead of Prismatic-VLM. Finally, we compare against SayPlanVision, a modified version of
+            <a href="https://sayplan.github.io/">SayPlan</a>, which in addition to the full scene graph also has access to task-relevant visual memory. 
             We observe that GraphEQA has higher success rate as compared to Explore-EQA and Explore-EQA-GPT4o, without the need to build an explicit 2D semantic task-specific memory. 
             Compared to Explore-EQA, our method completes the task in significantly lower planning steps and navigates the environment more efficiently (lower trajectory length). Explore-EQA-GPT4o has lower success rates but also has lower planning steps. Qualitative results show that Explore-EQA-GPT4o tends to be overconfident and terminates the episode early.
             GraphEQA outperforms SayPlanVision, without needing access to the complete scene graph.
@@ -289,7 +289,9 @@
   </div>
 </section>
 
-
+<div style="display: flex; justify-content: center;">
+  <h2 class="title is-3">Additional Real-world Experiments</h2>
+</div>
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
@@ -430,7 +432,7 @@
 
 
     <!-- Concurrent Work. -->
-    <div class="columns is-centered">
+    <!-- <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Related Links</h2>
 
@@ -440,7 +442,7 @@
           </p>
         </div>
       </div>
-    </div>
+    </div> -->
     <!--/ Concurrent Work. -->
 
   </div>
