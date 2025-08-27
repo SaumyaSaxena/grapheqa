@@ -89,25 +89,29 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">GraphEQA: Using 3D Semantic Scene Graphs for Real-time Embodied Question Answering</h1>
+          <h3 class="title is-5">Accepted to the 2025 <a href="https://www.corl.org/home">Conference on Robot Learning (CoRL)</a>!</h3>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://saumyasaxena.github.io/">Saumya Saxena</a><sup>1*</sup>,</span>
             <span class="author-block">
-              <a href="https://blakerbuchanan.github.io">Blake Buchanan</a><sup>2*</sup>,</span>
+              <a href="https://blakerbuchanan.github.io/">Blake Buchanan</a><sup>2*</sup>,</span>
             <span class="author-block">
               <a href="https://cpaxton.github.io/about/">Chris Paxton</a><sup>3</sup>,
             </span>
             <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=LYt_2MgAAAAJ&hl=en">Bingqing Chen</a><sup>4</sup>,
+              <a href="https://peiqi-liu.github.io/">Peiqi Liu</a><sup>4</sup>,
             </span>
             <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=U3KSTwkAAAAJ&hl=en">Narunas Vaskevicius</a><sup>4</sup>,
+              <a href="https://scholar.google.com/citations?user=LYt_2MgAAAAJ&hl=en">Bingqing Chen</a><sup>5</sup>,
             </span>
             <span class="author-block">
-              <a href="https://palmieri.github.io/">Luigi Palmieri</a><sup>4</sup>,
+              <a href="https://scholar.google.com/citations?user=U3KSTwkAAAAJ&hl=en">Narunas Vaskevicius</a><sup>5</sup>,
             </span>
             <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=7CLS0LwAAAAJ&hl=en">Jonathan Francis</a><sup>4</sup>
+              <a href="https://palmieri.github.io/">Luigi Palmieri</a><sup>5</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://jonfranc.com/">Jonathan Francis</a><sup>1,5</sup>
             </span>
             <span class="author-block">
               <a href="https://www.ri.cmu.edu/ri-faculty/oliver-kroemer/">Oliver Kroemer</a><sup>1</sup>
@@ -115,31 +119,34 @@
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Carnegie Mellon University</span>
-            <span class="author-block"><sup>2</sup>Neya Systems</span>
-            <span class="author-block"><sup>3</sup>Hello Robot Inc.</span>
-            <span class="author-block"><sup>4</sup>Bosch Center for AI</span>
+            <span class="author-block"><sup>1</sup>Carnegie Mellon University,</span>
+            <span class="author-block"><sup>2</sup>Neya Systems,</span>
+            <span class="author-block"><sup>3</sup>Agility Robotics,</span>
+            <span class="author-block"><sup>4</sup>Hello Robot,</span>
+            <span class="author-block"><sup>5</sup>Bosch Center for AI</span>
           </div>
-
+          <div class="is-size-8 publication-authors">
+            <span class="author-block"><sup>*</sup>Equal Contribution</span>
+          </div>
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://saumyasaxena.github.io/grapheqa/grapheqa_2025.pdf"
+                <a href="https://www.google.com"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
-                  <span>Paper</span>
+                  <span>Paper (coming soon)</span>
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://www.arxiv.org/abs/2412.14480"
+                <a href="https://www.google.com"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
-                  <span>arXiv</span>
+                  <span>arXiv (coming soon)</span>
                 </a>
               </span>
               <!-- Video Link. -->
@@ -154,7 +161,7 @@
               </span> -->
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://saumyasaxena.github.io/grapheqa/"
+                <a href="https://github.com/grapheqa/graph_eqa"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -214,7 +221,7 @@
         </div>
         <div class="content has-text-justified">
           <p>
-            In Embodied Question Answering (EQA), agents must explore and develop a semantic understanding of an unseen environment in order to answer a situated question with confidence. This remains a challenging problem in robotics, due to the difficulties in obtaining useful semantic representations, updating these representations online, and leveraging prior world knowledge for efficient exploration and planning. Aiming to address these limitations, we propose GraphEQA, a novel approach that utilizes real-time 3D metric-semantic scene graphs (3DSG) and task relevant images as multi-modal memory for grounding Vision-Language Models (VLMs) to perform EQA tasks in unseen environments. We employ a hierarchical planning approach that exploits the hierarchical nature of 3DSGs for structured planning and semantic-guided exploration. Through experiments in simulation on the HM-EQA dataset and in the real world, we demonstrate that our method outperforms key baselines by completing EQA tasks with higher success rate and fewer planning steps.
+            In Embodied Question Answering (EQA), agents must explore and develop a semantic understanding of an unseen environment to answer a situated question with confidence. This problem remains challenging in robotics, due to the difficulties in obtaining useful semantic representations, updating these representations online, and leveraging prior world knowledge for efficient planning and exploration. To address these limitations, we propose GraphEQA, a novel approach that utilizes real-time 3D metric-semantic scene graphs (3DSGs) and task relevant images as multi-modal memory for grounding Vision-Language Models (VLMs) to perform EQA tasks in unseen environments. We employ a hierarchical planning approach that exploits the hierarchical nature of 3DSGs for structured planning and semantics-guided exploration. We evaluate GraphEQA in simulation on two benchmark datasets, HM-EQA and OpenEQA, and demonstrate that it outperforms key baselines by completing EQA tasks with higher success rates and fewer planning steps. We further demonstrate GraphEQA in multiple real-world home and office environments.
           </p>
         </div>
       </div>
@@ -270,17 +277,28 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Experimental Results</h2>
         <div class="method-image">
-          <img src="./static/images/grapheqa_baselines_table.png" width="60%" alt="The results." />
+          <img src="./static/images/grapheqa_baselines_table.png" width="100%" alt="The results." />
         </div>
         <div class="content has-text-justified">
           <p>
-            We compare the performance of GraphEQA against competitive baselines in simulation in the Habitat-Sim environment on the HM3D-EQA dataset and in the real-world in two indoor environments: home and office. 
-            The above table shows comparison to baselines in simulation using metrics: average success rate (%), average number of VLM planning steps, and average trajectory length L<sub>&tau;</sub>. We compare against a strong baseline, <a href="https://explore-eqa.github.io/">Explore-EQA</a>, which calibrates Prismatic-VLM to answer embodied questions confidently. We also compare against Explore-EQA-GPT4o, a version of Explore-EQA which used GPT-4o instead of Prismatic-VLM. Finally, we compare against SayPlanVision, a modified version of
-            <a href="https://sayplan.github.io/">SayPlan</a>, which in addition to the full scene graph also has access to task-relevant visual memory. 
+            We compare the performance of GraphEQA against competitive baselines in simulation in the Habitat-Sim environment on the HM-EQA and OpenEQA datasets and in the real-world in two unique home environments. 
+            The above table shows comparison to baselines in simulation using metrics: average success rate (%), average number of VLM planning steps, and average trajectory length L<sub>&tau;</sub>.
+            We compare against several baselines and focus on methods that employ VLM-based planners for solving EQA or object goal navigation tasks. We compare against a strong baseline, <a href="https://explore-eqa.github.io/">Explore-EQA</a>, which calibrates Prismatic-VLM to answer embodied questions confidently while maintaining a 2D semantic memory and
+            using prompted images to guide exploration. Note that ExploreEQA is always executed for a prespecified maximum number of steps, with the highest confidence step chosen to answer the question,
+            while GraphEQA terminates based on a confidence threshold. We implement additional variants of
+            ExploreEQA with newer foundation models --- e.g., GPT4o, Llama 4 Maverick, and Gemini 2.5 Pro --- for fair comparison with respective VLM variants of GraphEQA.
+            We also compare against SayPlanVision, a modified version of <a href="https://sayplan.github.io/">SayPlan</a>, which in addition to the full scene graph also has access to task-relevant visual memory. 
             We observe that GraphEQA has higher success rate as compared to Explore-EQA and Explore-EQA-GPT4o, without the need to build an explicit 2D semantic task-specific memory. 
-            Compared to Explore-EQA, our method completes the task in significantly lower planning steps and navigates the environment more efficiently (lower trajectory length). Explore-EQA-GPT4o has lower success rates but also has lower planning steps. Qualitative results show that Explore-EQA-GPT4o tends to be overconfident and terminates the episode early.
+          </p>
+          <p>
+            Compared to Explore-EQA, our method completes the task in significantly lower planning steps and navigates the environment more efficiently (lower trajectory length).
             GraphEQA outperforms SayPlanVision, without needing access to the complete scene graph.
             Qualitatively, we observe that given access to the complete scene graph, SayPlanVision is overconfident about its choice of object node actions, leading to shorter trajectory lengths in successful cases, but also to increased failure cases.
+            Table 1 shows simulation results comparing GraphEQA to the above baselines on the HM-EQA and OpenEQA datasets.
+            Overall, GraphEQA outperforms all other baselines. Compared to Explore-EQA, our method completes tasks in significantly fewer planning steps and with lower trajectory length, indicating more efficient navigation.
+            We also observe that the GPT and Llama variants of Explore-EQA have lower success rates than Explore-EQA, with qualitative results indicating overconfidence in VLMs' predictions, leading to terminating episodes before exploring sufficiently.
+            We note that Explore-EQA's Gemini variant performs better than Explore-EQA, likely due to the inherent spatial reasoning capabilities of Gemini 2.5 Pro. 
+            GraphEQA outperforms SayPlanVision even though SayPlanVision has access to the complete scene graph.
           </p>
         </div>
       </div>
@@ -290,27 +308,15 @@
 </section>
 
 <div style="display: flex; justify-content: center;">
-  <h2 class="title is-3">Additional Real-world Experiments</h2>
+  <h2 class="title is-3">Real-world Experiments for Home (a)</h2>
 </div>
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="40%">
-            <source src="./static/videos/grapheqa_door_question_compressed_cropped_fast.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
         <div class="item item-cushions">
           <video poster="" id="cushions" autoplay controls muted loop playsinline height="40%">
             <source src="./static/videos/grapheqa_couch_cushions_question_v2_compressed_cropped_fast.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-handbag">
-          <video poster="" id="handbag" autoplay controls muted loop playsinline height="40%">
-            <source src="./static/videos/grapheqa_handbag_question_v2_compressed_cropped_fast.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -320,11 +326,94 @@
                     type="video/mp4">
           </video>
         </div>
+        <div class="item item-cushions">
+          <video poster="" id="cushions" autoplay controls muted loop playsinline height="40%">
+            <source src="./static/videos/grapheqa_couch_cushions_question_v2_compressed_cropped_fast.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-cushions">
+          <video poster="" id="cushions" autoplay controls muted loop playsinline height="40%">
+            <source src="./static/videos/grapheqa_couch_cushions_question_v2_compressed_cropped_fast.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
       </div>
     </div>
   </div>
 </section>
+<!--         <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="40%">
+            <source src="./static/videos/grapheqa_door_question_compressed_cropped_fast.mp4"
+                    type="video/mp4">
+          </video>
+        </div> -->
+<!--         <div class="item item-handbag">
+          <video poster="" id="handbag" autoplay controls muted loop playsinline height="40%">
+            <source src="./static/videos/grapheqa_handbag_question_v2_compressed_cropped_fast.mp4"
+                    type="video/mp4">
+          </video>
+        </div> -->
+<!-- <div style="display: flex; justify-content: center;">
+  <h2 class="title is-3">Additional Real-world Experiments for Home (b)</h2>
+</div>
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay controls muted loop playsinline height="10%">
+        <source src="./static/videos/grapheqa1_small.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">GraphEQA</span> deployed on the <a href="https://hello-robot.com/">Hello Robot</a> Stretch RE2 platform in Home Environment (b). 
+        <br> Question: <i>"What color is the dehumidifier machine?" A) Blue, B) White, C) Black</i> 
+        <br> 
+        <span style="text-align: left; display: block;">
+          Top panel: Robot navigating a home, while planning and mapping the environment in real-time; captured via an externally mounted camera. 
+          <br> 
+          Bottom left panel: Metric-semantic 3D mesh and scene graph construction from <a href="https://github.com/MIT-SPARK/Hydra?tab=readme-ov-file">Hydra</a>. TSDF-based 2D occupancy map where white nodes represent explored areas, red nodes are obstacles, blue nodes are clustered frontiers. Green node shows the target location chosen by the planner. 
+          <br> 
+          Bottom panel inset: Video feed from the robot head camera.
+      </span>
+      </h2>
+    </div>
+  </div>
+</section> -->
 
+<div style="display: flex; justify-content: center;">
+  <h2 class="title is-3">Real-world Experiments for Home (b)</h2>
+</div>
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+        
+        <!-- Video 1 -->
+        <div style="flex: 1 1 45%; max-width: 45%;">
+          <video autoplay controls muted loop playsinline style="width: 100%;">
+            <source src="./static/videos/grapheqa1_small.mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+            <span class="dnerf">GraphEQA</span> on Hello Robot Stretch RE2 Home (b).
+            <br> Q: <i>"What color is the dehumidifier?" A) Blue, B) White, C) Black</i>
+          </h2>
+        </div>
+
+        <!-- Video 2 -->
+        <div style="flex: 1 1 45%; max-width: 45%;">
+          <video autoplay controls muted loop playsinline style="width: 100%;">
+            <source src="./static/videos/grapheqa2_small.mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+            <span class="dnerf">GraphEQA</span> on Hello Robot Stretch RE2  Home (b).
+            <br> Q: <i>"Is there any object on the black plastic drawer?" A) Yes, B) No</i>
+          </h2>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
 <section class="section">
   <div class="container is-max-desktop">
 
@@ -452,11 +541,11 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{grapheqa2024,
-  author    = {Saxena, Saumya and Buchanan, Blake and Paxton, Chris and Chen, Bingqing and Vaskevicius, Narunas and Palmieri, Luigi and Francis, Jonathan, and Kroemer, Oliver},
-  title     = {GraphEQA: Using 3D Semantic Scene Graphs for Real-time Embodied Question Answering},
-  journal   = {arXiv},
-  year      = {2024},
+    <pre><code>@article{saxena2025GraphEQA,
+  author       = {Saxena, Saumya and Buchanan, Blake and Paxton, Chris and Liu, Peiqi and Chen, Bingqing and Vaskevicius, Narunas and Palmieri, Luigi and Francis, Jonathan and Kroemer, Oliver},
+  title        = {GraphEQA: Using 3D Semantic Scene Graphs for Real-time Embodied Question Answering},
+  conference   = {CoRL},
+  year         = {2025},
 }</code></pre>
   </div>
 </section>
